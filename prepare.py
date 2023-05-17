@@ -137,7 +137,7 @@ def basic_prepare(df):
     '''
     Takes in a df and adds columns with cleaned code
     '''
-    
+    df.dropna(inplace=True)
     # initial cleaning completed
     df['basic_clean_with_code'] = df['readme_contents'].apply(lambda x: cleaned_with_code_included(x))
     
